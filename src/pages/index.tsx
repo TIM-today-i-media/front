@@ -1,8 +1,9 @@
+import { listProps } from "../types";
 import CustomAxios from "../utils/lib/CustomAxios";
-export default function Home({list}) {
+export default function Home({list}:{list:listProps[]}) {
   return (
     <>
-      
+      <Home list={list}/>
     </>
   )
 }
