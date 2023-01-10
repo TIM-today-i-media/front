@@ -1,9 +1,5 @@
 export interface listProps {
-    cover:{
-        external : {
-            url:string
-        }
-    }
+    cover: CoverProps
     properties:PropertiesProps
 }
 
@@ -36,11 +32,7 @@ export interface PropertiesProps {
         }
     }
     Name:{
-        title:[
-            text:{
-                content:string
-            }
-        ]
+        title:TextProps[]
     }
 
 }
@@ -51,7 +43,12 @@ export interface TextProps {
         }
 }
 export interface MultiSelectProps {
+        color:string,
         id:string,
         name:string,
-        color:string,
+}
+export interface CoverProps {
+    external : {
+        url:string
+    }
 }
