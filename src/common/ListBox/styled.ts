@@ -2,47 +2,43 @@ import styled from "@emotion/styled";
 
 
 export const Wrapper = styled.div`
-    width: 250px;
-    height: 450px;
+    width: 260px;
+    height: 430px;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    :hover {
+        transform: translateY(-10px);
+    }
 `;
 
 export const WhiteBox = styled.div`
     width: 100%;
-    height: 310px;
+    height: 350px;
     background-color: white;
 `;
 
 export const Decs = styled.div`
+    width: 100%;
+    height: 100px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 4%;
 `;
 
 export const Title = styled.div`
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
     color: black;
-    border: 1px solid;
 `;
 export const Categorys = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-start;
     gap: 3%;
-    padding: 0 4%;
-
-    border: 1px solid;
 `; 
-
-export const Category = styled.div`
-    width: 30%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-
-    border: 1px solid black;
-`;

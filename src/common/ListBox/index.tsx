@@ -1,6 +1,7 @@
 import { CoverProps, listProps, MultiSelectProps } from "../../types"
 import * as S from "./styled";
 import Image from "next/image";
+import { CategoryBox } from "..";
 
 const ListBox = ({cover,title,category}:{cover:CoverProps,title:string,category:MultiSelectProps[] }) => {
     
@@ -12,7 +13,7 @@ const ListBox = ({cover,title,category}:{cover:CoverProps,title:string,category:
                     src={cover.external.url}
                     alt="포스터 이미지"
                     width={100}
-                    height={310}
+                    height={330}
                     objectFit="cover" 
                     />
                 ) : (
@@ -22,12 +23,14 @@ const ListBox = ({cover,title,category}:{cover:CoverProps,title:string,category:
             <S.Decs>
                 <S.Title>{title}</S.Title>
                 <S.Categorys>
-                    <S.Category>{category[0]?.name || ""}</S.Category>
                     {
-                        category[1] && <S.Category>{category[1].name}</S.Category>
-                    }
-                    {
-                        category[2] && <S.Category>{category[2].name}</S.Category>
+                        category.map((i) => (
+                            <CategoryBox 
+                                key={i.id}
+                                color={i.color}
+                                name={i.name}
+                            />
+                        ))
                     }
                 </S.Categorys>           
             </S.Decs>
