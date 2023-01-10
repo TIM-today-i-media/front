@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
-    border: 1px solid;
 `;
 
 export const FilterWrapper = styled.div`
@@ -24,6 +23,8 @@ export const ListWrapper = styled.div`
     padding: 0 10%;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 7%;
 
 `;

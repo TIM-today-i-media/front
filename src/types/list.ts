@@ -14,7 +14,7 @@ export interface PropertiesProps {
         rich_text:TextProps[]
     },
     Date:{
-        data:{
+        date:{
             start:string,
             end:string,
         }
@@ -33,6 +33,9 @@ export interface PropertiesProps {
     }
     Name:{
         title:TextProps[]
+    }
+    FamousLine:{
+        rich_text:TextProps[]
     }
 
 }

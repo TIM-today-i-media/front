@@ -2,12 +2,12 @@ import { CoverProps, MultiSelectProps } from "../../types"
 import * as S from "./styled";
 import Image from "next/image";
 import { CategoryBox } from "..";
+import { useRouter } from "next/router";
 
 const ListBox = ({cover,title,category}:{cover:CoverProps,title:string,category:MultiSelectProps[] }) => {
-    console.log(cover);
-    
+    const router = useRouter();
     return (
-        <S.Wrapper>
+        <S.Wrapper onClick={() => router.push(`/${title}`)}>
             {
                 cover ? (
                     <Image 
@@ -16,6 +16,7 @@ const ListBox = ({cover,title,category}:{cover:CoverProps,title:string,category:
                     width={100}
                     height={330}
                     objectFit="cover" 
+                    style={{borderTopLeftRadius: "5px",borderTopRightRadius: "5px"}}
                     />
                 ) : (
                     <S.WhiteBox />

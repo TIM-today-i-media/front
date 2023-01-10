@@ -9,6 +9,7 @@ export const HeaderWapper = styled.div`
     align-items: center;
     padding: 0 2%;
     transition: all 0.3s ease-in;
+    border: 1px solid gray;
     background-color: white;
 `;
 
@@ -16,27 +17,14 @@ export const LeftWapper = styled.div`
     width: 250px;
     height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    div {
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        font-size: 1.1rem;
-        height: 70%;
-        width: 70px;
-        background-image: linear-gradient(transparent 85%, #77D6B3 60%);
-        background-repeat: no-repeat;
-        background-size: 0% 100%;
-        transition: div 0.3s ease-in;
-    }
+    align-items: center;
     a{
-        font-size: 1.5rem;
-        height: 100%;
+        font-size: 2.3rem;
+        font-weight: bold;
         display: flex;
         align-items: center;
-        transition: all 0.3s ease-in;
         text-decoration: none;
+        color: #143A67;
     }
 `;
 
@@ -86,8 +74,8 @@ export const CenterWapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border: 2px solid #77D6B3;
-    border-radius: 8px;
+    border: 2px solid #637AAE;
+    border-radius: 10px;
     padding-left: 20px;
 
     input {
@@ -104,8 +92,9 @@ export const CenterWapper = styled.div`
         position: absolute;
         top: 6px;
         left: 350px;
-        width: 30px;
+        width: 25px;
         cursor: pointer;
+        color: #637AAE;
     }
 
 `;

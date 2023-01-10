@@ -6,18 +6,14 @@ export const Wrapper = styled.div`
     height: 430px;
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 30px 0;
 
     :hover {
         transform: translateY(-10px);
-    }
-    image{
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
     }
 `;
 

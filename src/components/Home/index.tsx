@@ -2,12 +2,9 @@ import { ListBox } from "../../common"
 import { listProps } from "../../types"
 import * as S from "./styled";
 
-const Home = ({list}:{list:listProps[]}) => {
+const Home = ({list}:{list:listProps[]}) => {    
     return (
         <S.Wrapper>
-            <S.FilterWrapper>
-                <div>hi</div>
-            </S.FilterWrapper>
             <S.ListWrapper>
             {
                 list.map((i,index) => (

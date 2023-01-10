@@ -1,14 +1,12 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Header } from "../common";
 import HomeDetail from "../components/HomeDetail";
 import { listProps } from "../types";
 import CustomAxios from "../utils/lib/CustomAxios";
 
-export const HomeDetailPage:NextPage<{data:listProps}> = ({data}) => {
+export const HomeDetailPage:NextPage<{detailData:listProps}> = ({detailData}) => {
   return (
     <>
-      <Header />
-      <HomeDetail data={data} />
+      <HomeDetail data={detailData} />
     </>
   )
 }
@@ -31,11 +29,11 @@ export const getStaticProps:GetStaticProps  = async (ctx) => {
             }   
         }
       });
-      console.log(data);
+      const detailData = data.results[0]
 
       return {
         props: {
-          data
+          detailData
         },
       };
     } catch (e) {
