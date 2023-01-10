@@ -1,11 +1,14 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { Header } from "../common";
+import HomeDetail from "../components/HomeDetail";
 import { listProps } from "../types";
 import CustomAxios from "../utils/lib/CustomAxios";
 
 export const HomeDetailPage:NextPage<{data:listProps}> = ({data}) => {
   return (
     <>
-      {/* <Home list={list}/> */}
+      <Header />
+      <HomeDetail data={data} />
     </>
   )
 }

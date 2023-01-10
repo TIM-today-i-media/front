@@ -6,7 +6,7 @@ const Home = ({list}:{list:listProps[]}) => {
     return (
         <S.Wrapper>
             <S.FilterWrapper>
-
+                <div>hi</div>
             </S.FilterWrapper>
             <S.ListWrapper>
             {

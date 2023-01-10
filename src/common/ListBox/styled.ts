@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
+    margin: 30px 0;
 
     :hover {
         transform: translateY(-10px);
