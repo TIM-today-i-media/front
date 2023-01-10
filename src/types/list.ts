@@ -51,4 +51,7 @@ export interface CoverProps {
     external : {
         url:string
     }
+    file? : {
+        url:string
+    }
 }

@@ -1,16 +1,17 @@
-import { CoverProps, listProps, MultiSelectProps } from "../../types"
+import { CoverProps, MultiSelectProps } from "../../types"
 import * as S from "./styled";
 import Image from "next/image";
 import { CategoryBox } from "..";
 
 const ListBox = ({cover,title,category}:{cover:CoverProps,title:string,category:MultiSelectProps[] }) => {
+    console.log(cover);
     
     return (
         <S.Wrapper>
             {
                 cover ? (
                     <Image 
-                    src={cover.external.url}
+                    src={cover?.external?.url || cover?.file?.url || ""}
                     alt="포스터 이미지"
                     width={100}
                     height={330}

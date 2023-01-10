@@ -9,9 +9,14 @@ export const Wrapper = styled.div`
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    border-radius: 10px;
 
     :hover {
         transform: translateY(-10px);
+    }
+    image{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 `;
 
