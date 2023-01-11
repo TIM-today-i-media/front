@@ -114,6 +114,5 @@ export const DecsLong = styled.div`
         white-space: pre-wrap;
         word-break: break-all;
         overflow: auto;
-
     }
 `;

@@ -25,6 +25,6 @@ export const ListWrapper = styled.div`
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 7%;
+    gap: 8.1%;
 
 `;

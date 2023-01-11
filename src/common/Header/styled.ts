@@ -28,15 +28,6 @@ export const LeftWapper = styled.div`
     }
 `;
 
-export const RightWapper = styled.div`
-    font-size: 1.5rem;
-    width: 300px;
-    height: 5vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 30px;
-`;
 
 export const ProfileBox = styled.div`
    width :50px;
@@ -67,7 +58,7 @@ export const DarkModeBtn = styled.div`
 
 
 
-export const CenterWapper = styled.div`
+export const InputWapper = styled.div`
     position: relative;
     width: 400px;
     height: 4.5vh;
@@ -96,6 +87,54 @@ export const CenterWapper = styled.div`
         cursor: pointer;
         color: #637AAE;
     }
-
+`;
+export const CenterWrapper = styled.div`
+    display: flex;
+    gap: 30px;
+    position: relative;
 `;
 
+export const FilterBtn = styled.div`
+    width: 200px;
+    height: 4.5vh;
+    display: flex;
+    border: 1px solid #637AAE;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    color: #637AAE;
+    padding-left: 15px;
+    cursor: pointer;
+    /* position: relative; */
+    font-weight: bold;
+`;
+
+export const FilterBox = styled.div`
+    position: absolute;
+    top: 50px;
+    left: 430px;
+    width: 400px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #637AAE;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 100;
+`;
+
+export const BoxTop = styled.div`
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid gray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+`;
+
+
+export const BoxBottom = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;

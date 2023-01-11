@@ -21,19 +21,19 @@ export interface PropertiesProps {
     },
     Ost:{
         url:string
-    }
+    },
     Category:{
         multi_select: MultiSelectProps[]
-    }
+    },
     Tag:{
         select:{
             name:string,
             color:string,
         }
-    }
+    },
     Name:{
         title:TextProps[]
-    }
+    },
     FamousLine:{
         rich_text:TextProps[]
     }
@@ -53,7 +53,7 @@ export interface MultiSelectProps {
 export interface CoverProps {
     external : {
         url:string
-    }
+    },
     file? : {
         url:string
     }

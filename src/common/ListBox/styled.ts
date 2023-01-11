@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 
-
 export const Wrapper = styled.div`
     width: 260px;
     height: 430px;
