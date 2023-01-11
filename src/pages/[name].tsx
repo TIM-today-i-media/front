@@ -10,12 +10,18 @@ export const HomeDetailPage:NextPage<{detailData:listProps}> = ({detailData}) =>
     </>
   )
 }
-export const getStaticPaths: GetStaticPaths = () => {
-    return {
-      paths: [],
-      fallback: true,
-    };
-  };
+
+export const getStaticPaths = async () => {
+  const {data} = await CustomAxios.post(`/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}/query`,{});
+  const list = data.results
+
+  const paths = list.map((item:listProps) => ({
+    params: { name: item.properties.Name.title[0].text.content },
+  }))
+
+  return { paths, fallback: false }
+}
+
 
 export const getStaticProps:GetStaticProps  = async (ctx) => {
     const name = ctx?.params?.name

@@ -16,7 +16,6 @@ export const HomePage:NextPage<{list:listProps[]}> = ({list}) => {
 export const getStaticProps:GetStaticProps  = async () => {
   try {
       const {data} = await CustomAxios.post(`/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}/query`,{});
-      console.log(data.results);
       const list = data.results
 
       return {

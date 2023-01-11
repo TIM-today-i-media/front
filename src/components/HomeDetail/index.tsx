@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 
 const HomeDetail = ({data}:{data:listProps}) => {
     const router = useRouter();
-    console.log(data);
 
     const  handleOstClick = () => {
         window.open(data.properties.Ost.url)
@@ -33,7 +32,7 @@ const HomeDetail = ({data}:{data:listProps}) => {
                         <S.Title>{data?.properties?.Name?.title[0]?.text?.content}</S.Title>
                         <span>{`${data?.properties?.Date?.date?.start}`}{data?.properties?.Date?.date?.end &&`~${data?.properties?.Date?.date?.end}`}</span>
                     </S.TopCenter>
-                    <div/>
+                    <div style={{width:"10px"}}></div>
                 </S.TopWrapper>
                 <S.OstWrapper>
                     <span onClick={handleOstClick}>

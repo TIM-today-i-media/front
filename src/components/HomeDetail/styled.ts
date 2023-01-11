@@ -54,7 +54,7 @@ export const TopCenter = styled.div`
     display: flex;
     align-items: center;
     gap: 50px;
-    margin-left: 12%;
+    margin-left: 10%;
 
     span{
         margin-top: 15px;
@@ -89,7 +89,7 @@ export const DecsWrapper = styled.div`
 `;
 
 export const Decs = styled.div`
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 `;
 
@@ -99,17 +99,21 @@ export const DecsLong = styled.div`
     gap: 10px;
 
     span{
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
     }
 
     div{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     pre{
         padding: 50px 0;
         font-size: 1.5rem;
         text-align: center;
+        white-space: pre-wrap;
+        word-break: break-all;
+        overflow: auto;
+
     }
 `;
