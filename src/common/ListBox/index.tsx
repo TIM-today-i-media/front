@@ -11,12 +11,12 @@ const ListBox = ({cover,title,category}:{cover:CoverProps,title:string,category:
             {
                 cover ? (
                     <Image 
-                    src={cover?.external?.url || cover?.file?.url || ""}
-                    alt="포스터 이미지"
-                    width={100}
-                    height={330}
-                    objectFit="cover" 
-                    style={{borderTopLeftRadius: "5px",borderTopRightRadius: "5px"}}
+                        src={cover?.external?.url || cover?.file?.url || ""}
+                        alt="포스터 이미지"
+                        width={100}
+                        height={330}
+                        objectFit="cover" 
+                        style={{borderTopLeftRadius: "5px",borderTopRightRadius: "5px"}}
                     />
                 ) : (
                     <S.WhiteBox />

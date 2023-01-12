@@ -58,3 +58,10 @@ export interface CoverProps {
         url:string
     }
 }
+
+export interface FilterQeuryType {
+    property: string,
+    multi_select:{
+        contains:string,
+    }
+}

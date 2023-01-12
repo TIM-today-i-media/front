@@ -68,6 +68,7 @@ export const InputWapper = styled.div`
     border: 2px solid #637AAE;
     border-radius: 10px;
     padding-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     input {
         color: gray;
@@ -105,8 +106,8 @@ export const FilterBtn = styled.div`
     color: #637AAE;
     padding-left: 15px;
     cursor: pointer;
-    /* position: relative; */
     font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `;
 
 export const FilterBox = styled.div`
@@ -121,6 +122,7 @@ export const FilterBox = styled.div`
     border-radius: 10px;
     background-color: white;
     z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `;
 
 export const BoxTop = styled.div`
@@ -135,6 +137,58 @@ export const BoxTop = styled.div`
 
 
 export const BoxBottom = styled.div`
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+`;
+
+export const TagBtns = styled.div`
+    width: 270px;
+    height: 100%;
+    display: flex;
+    border-right: 1px solid gray;
+    input{
+        display: none;
+    }
+
+    input[type=radio]+label{
+        width: 90px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        color: #353535;
+        background-color: white;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    input[type=radio]:checked+label{
+        color: white;
+        background-color: #77A0DF;
+    }
+
+
+`;
+
+export const SubmitBtn = styled.div`
+    width: 130px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        width: 90px;
+        height: 40px;
+        font-size: 1.2rem;
+        color: white;
+        background-color: #77A0DF;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
 `;
