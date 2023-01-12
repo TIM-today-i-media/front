@@ -13,20 +13,14 @@ const Header = () => {
   const [filterCategoryArray, setFilterCategoryArray ] = useState<string[]>([]);
   const [isfilterSubmitBtn , setIsfilterSubmitBtn] = useRecoilState<boolean>(isfilterCategoryBtnAtom);
   const [field, setField] = useRecoilState(fieldStateAtom);
-
   const [filterObjectArray, setFilterObjectArray] = useRecoilState(filterObjectAtom);
+  const [searchValue, SetSearchValue] = useState<string>("");
 
-  useEffect(() => {
-    console.log(field);
-  },[field])
-
-//   const [currentPage, setCurrentPage] = useRecoilState(AtomCurrentPage);
-//   const [searchValue, SetSearchValue] = useRecoilState<{value: string,isClick:boolean}>(AtomSearchValue);
-
-//   const handleClick = () => {
-//     if(!searchValue.value) return toast('검색어를 입력해주세요.', {type:"warning"})
-//     SetSearchValue({...searchValue , isClick:true})   
-//   }
+  const handleClick = () => {
+    if(!searchValue) return router.push('/');
+    router.push(`/search/${searchValue}`)
+  }
+  
 const handleCategorySelectClick = (name:string) => {
   if(!filterCategoryArray.includes(name)){
     setFilterCategoryArray([...filterCategoryArray, name])
@@ -51,6 +45,11 @@ const handleSubmitBtnClick = () => {
   setIsfilterSubmitBtn(true)
 }
 
+const handleClickTogglrBtn = () => {
+  setFilterToggleBtn(pre => !pre)
+  setFilterCategoryArray([])
+}
+
   return (
     <S.HeaderWapper>  
       <S.LeftWapper>
@@ -58,17 +57,16 @@ const handleSubmitBtnClick = () => {
       </S.LeftWapper>
        <S.CenterWrapper>
         <S.InputWapper>
-          {/* <input type="text" value={searchValue.value} onChange={(e) => SetSearchValue({...searchValue,value:e.target.value})}  placeholder="검색어를 입력해주세요"  */}
-          {/* onKeyDown={(e:any) => {if (e.key === 'Enter'){handleClick()}}} */}
-          {/* /> */}
-          <input type="text"  placeholder="영화/드라마 이름을 입력하세요" />
+          <input type="text" placeholder="영화/드라마 이름을 입력하세요" value={searchValue} onChange={(e) => SetSearchValue(e.target.value)}
+              onKeyDown={(e:any) => {if (e.key === 'Enter'){handleClick()}}}
+           />
           <label >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
           </label>
         </S.InputWapper>
-        <S.FilterBtn onClick={() => setFilterToggleBtn(pre => !pre)}>카테고리</S.FilterBtn>
+        <S.FilterBtn onClick={handleClickTogglrBtn}>카테고리</S.FilterBtn>
           {
             filterToggleBtn &&
             <S.FilterBox>

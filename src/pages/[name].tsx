@@ -22,7 +22,6 @@ export const getStaticPaths:GetStaticPaths = async () => {
   return { paths, fallback: false }
 }
 
-
 export const getStaticProps:GetStaticProps  = async (ctx) => {
     const name = ctx?.params?.name
     
