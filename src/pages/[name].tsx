@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { Shead } from "../common";
 import HomeDetail from "../components/HomeDetail";
 import { listProps } from "../types";
 import CustomAxios from "../utils/lib/CustomAxios";
@@ -6,6 +7,7 @@ import CustomAxios from "../utils/lib/CustomAxios";
 export const HomeDetailPage:NextPage<{detailData:listProps}> = ({detailData}) => {
   return (
     <>
+      <Shead seoTitle={'디테일페이지'} />
       <HomeDetail data={detailData} />
     </>
   )

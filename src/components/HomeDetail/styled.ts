@@ -149,6 +149,7 @@ export const DecsLong = styled.div`
     }
 
     div{
+        padding-left: 40px;
         font-size: 1.3rem;
     }
 

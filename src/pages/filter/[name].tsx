@@ -7,6 +7,7 @@ import CustomAxios from "../../utils/lib/CustomAxios";
 export const FilterPage:NextPage<{list:listProps[]}> = ({list}) => {
   return (
     <>
+      <Shead seoTitle={'메인페이지'} />
       <Header />
       <Home list={list}/>
     </>
