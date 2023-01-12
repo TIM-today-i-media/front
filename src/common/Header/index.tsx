@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { CategorySelect } from "..";
 import { CategoryArray } from "../../utils/CategoryArray";
 import { useRecoilState } from "recoil";
-import { fieldStateAtom, filterObjectAtom, isfilterCategoryBtnAtom } from "../../atom";
+import { fieldStateAtom, filterObjectAtom, isfilterCategoryBtnAtom, SearchValueAtom } from "../../atom";
 import { useRouter } from "next/router";
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
   const [isfilterSubmitBtn , setIsfilterSubmitBtn] = useRecoilState<boolean>(isfilterCategoryBtnAtom);
   const [field, setField] = useRecoilState(fieldStateAtom);
   const [filterObjectArray, setFilterObjectArray] = useRecoilState(filterObjectAtom);
-  const [searchValue, SetSearchValue] = useState<string>("");
+  const [searchValue, SetSearchValue] = useRecoilState<string>(SearchValueAtom);
 
   const handleClick = () => {
     if(!searchValue) return router.push('/');

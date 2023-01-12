@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 
 export const LeftWrapper = styled.div`
     position: relative;
-    width: 45%;
+    width: 40%;
     height: 100%;
 `;
 
@@ -27,8 +27,9 @@ export const TopWrapper = styled.div`
     width: 100%;
     height: 15vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 20px;
 
 `;
 
@@ -45,36 +46,77 @@ export const TopLeft = styled.div`
     }
 `;
 
+export const MiddleWrapper = styled.div`
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+`;
+
+export const MiddleTop = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+`;
+
+export const MiddleBottom = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+`;
+
+export const TitleWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span{
+        padding-top: 20px;
+        font-size: 1.3rem;
+    }
+`;
+
 export const Title = styled.div`
     font-size: 3rem;
     font-weight: bold;
 `;
 
-export const TopCenter = styled.div`
+export const OstWrapper = styled.div`
+    width: 70px;
+    height: 100%;
     display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-left: 10%;
-
+    align-items: flex-end;
+    color: purple;
+    gap: 5px;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    svg{
+        cursor: pointer;
+        width: 20px;
+    }
     span{
-        margin-top: 15px;
+        cursor: pointer;
     }
 `;
 
-export const OstWrapper = styled.div`
-    width: 100%;
-    height: 5vh;
+export const CategoryBtns = styled.div`
+    width: 30%;
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: 6%;
+    gap: 20px;
+`;
+
+export const Grade = styled.div`
+    height: 50px;
+    display: flex;
     gap: 5px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: purple;
-    cursor: pointer;
+    align-items: center;
+
     svg{
-        width: 20px;
+        width: 15px;
+        color: #A4C8FF;
     }
 `;
 
@@ -85,12 +127,8 @@ export const DecsWrapper = styled.div`
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
-`;
-
-export const Decs = styled.div`
-    font-size: 1.5rem;
-    font-weight: bold;
+    gap: 50px;
+    padding-top: 100px;
 `;
 
 export const DecsLong = styled.div`
@@ -101,6 +139,13 @@ export const DecsLong = styled.div`
     span{
         font-size: 1.5rem;
         font-weight: bold;
+        display: flex;
+        align-items: center;
+        color: #77A0DF;
+
+        svg{
+            width: 30px;
+        }
     }
 
     div{
@@ -114,5 +159,6 @@ export const DecsLong = styled.div`
         white-space: pre-wrap;
         word-break: break-all;
         overflow: auto;
+        /* border: 1px solid; */
     }
 `;

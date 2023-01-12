@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 0.9rem;
     color: ${(props) => props.color};
     border: 1px solid ${(props) => props.color};

@@ -15,3 +15,8 @@ export const filterObjectAtom = atom<FilterQeuryType[]>({
 	key: 'filterObjectAtom',
 	default: [],
 });
+
+export const SearchValueAtom = atom<string>({
+	key: 'SearchValueAtom',
+	default: "",
+});
