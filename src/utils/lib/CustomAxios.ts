@@ -7,7 +7,7 @@ const CustomAxios = axios.create({
     "Accept": 'application/json',
     "Notion-Version": '2022-06-28',
     "Content-type": 'application/json',
-    "Authorization": `Bearer ${process.env.NEXT_PUBLIC_NOTION_TOKEN}`
+    "Authorization": `Bearer ${process.env.NEXT_PUBLIC_NOTION_TOKEN}`,
   }
 });
 

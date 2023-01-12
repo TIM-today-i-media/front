@@ -5,8 +5,10 @@ import { CategorySelect } from "..";
 import { CategoryArray } from "../../utils/CategoryArray";
 import { useRecoilState } from "recoil";
 import { fieldStateAtom, filterObjectAtom, isfilterCategoryBtnAtom } from "../../atom";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
   const [filterToggleBtn, setFilterToggleBtn ] = useState(false);
   const [filterCategoryArray, setFilterCategoryArray ] = useState<string[]>([]);
   const [isfilterSubmitBtn , setIsfilterSubmitBtn] = useRecoilState<boolean>(isfilterCategoryBtnAtom);
@@ -15,8 +17,8 @@ const Header = () => {
   const [filterObjectArray, setFilterObjectArray] = useRecoilState(filterObjectAtom);
 
   useEffect(() => {
-    console.log(filterObjectArray);
-  },[filterObjectArray])
+    console.log(field);
+  },[field])
 
 //   const [currentPage, setCurrentPage] = useRecoilState(AtomCurrentPage);
 //   const [searchValue, SetSearchValue] = useRecoilState<{value: string,isClick:boolean}>(AtomSearchValue);
@@ -43,6 +45,9 @@ const handleCategorySelectClick = (name:string) => {
 }
 
 const handleSubmitBtnClick = () => {
+  if(filterCategoryArray.length === 0 && !field) return router.push("/")
+  const filterQuery = filterCategoryArray.join(' ')
+  router.push(`/filter/${filterQuery} ${field}`)
   setIsfilterSubmitBtn(true)
 }
 
@@ -83,9 +88,9 @@ const handleSubmitBtnClick = () => {
                 <S.TagBtns>
                   <input defaultChecked type="radio" value={""} id="전체" name="분야" onClick={() => setField("")}/>
                   <label htmlFor="전체" style={{borderBottomLeftRadius:"6px"}}>전체</label>
-                  <input type="radio" value={field} id="영화" name="분야" onClick={() => setField("")}/>
+                  <input type="radio" value={field} id="영화" name="분야" onClick={() => setField("영화")}/>
                   <label htmlFor="영화">영화</label>
-                  <input type="radio" value={field} id="드라마" name="분야" onClick={() => setField("")}/>
+                  <input type="radio" value={field} id="드라마" name="분야" onClick={() => setField("드라마")}/>
                   <label htmlFor="드라마">드라마</label>
                 </S.TagBtns>
                 <S.SubmitBtn>
