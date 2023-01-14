@@ -18,13 +18,14 @@ export const LeftWapper = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
-    a{
+    p{
         font-size: 2.3rem;
         font-weight: bold;
         display: flex;
         align-items: center;
         text-decoration: none;
         color: #143A67;
+        cursor: pointer;
     }
 `;
 

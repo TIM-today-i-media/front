@@ -4,21 +4,23 @@ import { useEffect, useState } from "react";
 import { CategorySelect } from "..";
 import { CategoryArray } from "../../utils/CategoryArray";
 import { useRecoilState } from "recoil";
-import { fieldStateAtom, filterObjectAtom, isfilterCategoryBtnAtom, SearchValueAtom } from "../../atom";
+import { fieldStateAtom, filterCategoryAtom, filterObjectAtom, isfilterCategoryBtnAtom, SearchValueAtom } from "../../atom";
 import { useRouter } from "next/router";
 
 const Header = () => {
   const router = useRouter();
   const [filterToggleBtn, setFilterToggleBtn ] = useState(false);
-  const [filterCategoryArray, setFilterCategoryArray ] = useState<string[]>([]);
-  const [isfilterSubmitBtn , setIsfilterSubmitBtn] = useRecoilState<boolean>(isfilterCategoryBtnAtom);
+  const [filterCategoryArray, setFilterCategoryArray ] = useRecoilState<string[]>(filterCategoryAtom);
   const [field, setField] = useRecoilState(fieldStateAtom);
   const [filterObjectArray, setFilterObjectArray] = useRecoilState(filterObjectAtom);
   const [searchValue, SetSearchValue] = useRecoilState<string>(SearchValueAtom);
 
   const handleClick = () => {
-    if(!searchValue) return router.push('/');
+    if(!searchValue) {
+      setFilterCategoryArray([])
+      return router.push('/')}
     router.push(`/search/${searchValue}`)
+    setFilterToggleBtn(false)
   }
   
 const handleCategorySelectClick = (name:string) => {
@@ -39,21 +41,29 @@ const handleCategorySelectClick = (name:string) => {
 }
 
 const handleSubmitBtnClick = () => {
-  if(filterCategoryArray.length === 0 && !field) return router.push("/")
+  setFilterToggleBtn(false)
+  if(filterCategoryArray.length === 0 && !field) {
+    setFilterCategoryArray([])
+    return router.push("/")
+  } 
+    
   const filterQuery = filterCategoryArray.join(' ')
   router.push(`/filter/${filterQuery} ${field}`)
-  setIsfilterSubmitBtn(true)
 }
 
 const handleClickTogglrBtn = () => {
   setFilterToggleBtn(pre => !pre)
+}
+
+const handleTitleClick = () => {
   setFilterCategoryArray([])
+  return router.push("/")
 }
 
   return (
     <S.HeaderWapper>  
       <S.LeftWapper>
-        <Link href="/">TIM</Link>
+        <p onClick={handleTitleClick}>TIM</p>
       </S.LeftWapper>
        <S.CenterWrapper>
         <S.InputWapper>

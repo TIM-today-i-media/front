@@ -11,6 +11,11 @@ export const fieldStateAtom = atom<string>({
 	default: '',
 });
 
+export const filterCategoryAtom = atom<string[]>({
+	key: 'filterCategoryAtom',
+	default: [],
+});
+
 export const filterObjectAtom = atom<FilterQeuryType[]>({
 	key: 'filterObjectAtom',
 	default: [],
