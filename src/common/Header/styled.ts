@@ -116,7 +116,7 @@ export const FilterBox = styled.div`
     top: 50px;
     left: 430px;
     width: 400px;
-    height: 170px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     border: 1px solid #637AAE;
@@ -128,9 +128,9 @@ export const FilterBox = styled.div`
 
 export const BoxTop = styled.div`
     width: 100%;
-    height: 110px;
-    display: flex;
-    flex-wrap: wrap;
+    height: 120px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     border-bottom: 1px solid gray;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -149,27 +149,30 @@ export const TagBtns = styled.div`
     width: 270px;
     height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     border-right: 1px solid gray;
     input{
         display: none;
     }
 
     input[type=radio]+label{
-        width: 90px;
-        height: 100%;
+        width: 88px;
+        height: 90%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.3rem;
-        color: #353535;
+        color: #637AAE;
         background-color: white;
         cursor: pointer;
         font-weight: bold;
+        border-radius: 5px;
     }
 
     input[type=radio]:checked+label{
         color: white;
-        background-color: #77A0DF;
+        background-color: #637AAE;
     }
 
 
@@ -182,11 +185,11 @@ export const SubmitBtn = styled.div`
     align-items: center;
     justify-content: center;
     button {
-        width: 90px;
-        height: 40px;
-        font-size: 1.2rem;
+        width: 105px;
+        height: 50px;
+        font-size: 1.45rem;
         color: white;
-        background-color: #77A0DF;
+        background-color: #282A3A;
         border-radius: 5px;
         border: none;
         font-weight: bold;

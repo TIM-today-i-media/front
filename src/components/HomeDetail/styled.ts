@@ -116,7 +116,7 @@ export const Grade = styled.div`
 
     svg{
         width: 15px;
-        color: #A4C8FF;
+        color: #637AAE;
     }
 `;
 
@@ -136,12 +136,13 @@ export const DecsLong = styled.div`
     flex-direction: column;
     gap: 10px;
 
+
     span{
         font-size: 1.5rem;
         font-weight: bold;
         display: flex;
         align-items: center;
-        color: #77A0DF;
+        color: #637AAE;
 
         svg{
             width: 30px;
@@ -154,12 +155,14 @@ export const DecsLong = styled.div`
     }
 
     pre{
-        padding: 50px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 1.5rem;
         text-align: center;
         white-space: pre-wrap;
         word-break: break-all;
         overflow: auto;
-        /* border: 1px solid; */
+        height: 35vh;
     }
 `;

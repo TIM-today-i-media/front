@@ -36,6 +36,9 @@ export const Title = styled.div`
     font-size: 1.4rem;
     font-weight: bold;
     color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 `;
 export const Categorys = styled.div`
     width: 100%;

@@ -1,11 +1,11 @@
 import * as S from "./styled";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CategorySelect } from "..";
 import { CategoryArray } from "../../utils/CategoryArray";
 import { useRecoilState } from "recoil";
-import { fieldStateAtom, filterCategoryAtom, filterObjectAtom, isfilterCategoryBtnAtom, SearchValueAtom } from "../../atom";
+import { fieldStateAtom, filterCategoryAtom, filterObjectAtom, SearchValueAtom } from "../../atom";
 import { useRouter } from "next/router";
+import { SearchIcon } from "../../../public/svg";
 
 const Header = () => {
   const router = useRouter();
@@ -71,9 +71,7 @@ const handleTitleClick = () => {
               onKeyDown={(e:any) => {if (e.key === 'Enter'){handleClick()}}}
            />
           <label >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-          </svg>
+         <SearchIcon />
           </label>
         </S.InputWapper>
         <S.FilterBtn onClick={handleClickTogglrBtn}>카테고리</S.FilterBtn>
