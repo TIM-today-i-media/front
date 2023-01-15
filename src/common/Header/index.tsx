@@ -74,8 +74,11 @@ const handleTitleClick = () => {
          <SearchIcon />
           </label>
         </S.InputWapper>
+                   
+        </S.CenterWrapper>
+        <S.RightWrapper>
         <S.FilterBtn onClick={handleClickTogglrBtn}>카테고리</S.FilterBtn>
-          {
+        {
             filterToggleBtn &&
             <S.FilterBox>
               <S.BoxTop>
@@ -105,10 +108,7 @@ const handleTitleClick = () => {
               </S.BoxBottom>
             </S.FilterBox>
           }
-           
-        
-        </S.CenterWrapper>
-      <div/>
+        </S.RightWrapper>
     </S.HeaderWapper>
   )
 }

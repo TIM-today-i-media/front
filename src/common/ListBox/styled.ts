@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    border-radius: 5px;
     margin: 30px 0;
+    border-radius: 5px;
 
     :hover {
         transform: translateY(-10px);
@@ -30,6 +30,8 @@ export const Decs = styled.div`
     justify-content: center;
     gap: 7px;
     padding: 0 4%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 `;
 
 export const Title = styled.div`

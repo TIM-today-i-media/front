@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 export const HeaderWapper = styled.div`
     height: 8vh;
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,7 +113,7 @@ export const FilterBtn = styled.div`
 export const FilterBox = styled.div`
     position: absolute;
     top: 50px;
-    left: 430px;
+    left: -200px;
     width: 400px;
     height: 180px;
     display: flex;
@@ -195,4 +194,8 @@ export const SubmitBtn = styled.div`
         font-weight: bold;
         cursor: pointer;
     }
+`;
+
+export const RightWrapper = styled.div`
+    position: relative;
 `;
